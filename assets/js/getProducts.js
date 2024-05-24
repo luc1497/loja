@@ -26,7 +26,7 @@ function getProducts(){
                     </div>
                     <span>${product.titulo.toUpperCase()}</span>
                     <span>R$ ${product.valor}</span>
-                    <span>${product.img}</span>
+                    <span>RATING</span>
                 </div>
                 `
                 
