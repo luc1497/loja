@@ -10,6 +10,17 @@ $response = $connect->query($query);
 $i=0;
 
 while ($product = $response->fetch_assoc()){
+    $id = $product['id'];
+    if(file_exists("../assets/images/products/$id/foto.jpg")){
+        $product['img'] = true;
+    }else{
+        $product['img'] = false;
+        
+    }
+    
+    $id = $product['id'];
+    $filepath = "assets/images/products";
+        
     $products[$i] = $product;
     $i++;
 }

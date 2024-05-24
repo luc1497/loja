@@ -16,17 +16,21 @@ function getProducts(){
             
             
             products.forEach(product => {
+              
+                       
                 showcase.innerHTML +=
                 `
                 <div class="productContainer">
                     <div class="productImgContainer">
-                        <img class="productImg" src="assets/images/products/${product.id}/foto.jpg" alt="img">
+                    ${product.img == true ? `<img class="productImg" src="assets/images/products/${product.id}/foto.jpg" alt="img">` : `<img class="productImg" src="assets/images/products/noImage.png" alt="img">`}
                     </div>
                     <span>${product.titulo.toUpperCase()}</span>
                     <span>R$ ${product.valor}</span>
-                    <span>RATING</span>
+                    <span>${product.img}</span>
                 </div>
                 `
+                
+                
             });
             var texto = "teste";
             texto.toUpperCase;
