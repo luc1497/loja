@@ -20,6 +20,7 @@ function getProducts(){
                        
                 showcase.innerHTML +=
                 `
+                <form action="products/product.php" method="GET" onclick="formSubmit(${product.id});" class="productForm" id="productForm${product.id}">
                 <div class="productContainer">
                     <div class="productImgContainer">
                     ${product.img == true ? `<img class="productImg" src="assets/images/products/${product.id}/foto.jpg" alt="img">` : `<img class="productImg" src="assets/images/products/noImage.png" alt="img">`}
@@ -27,7 +28,9 @@ function getProducts(){
                     <span>${product.titulo.toUpperCase()}</span>
                     <span>R$ ${product.valor}</span>
                     <span>RATING</span>
+                    <input type="hidden" name="productId" value="${product.id}"></input>
                 </div>
+                </form>
                 `
                 
                 

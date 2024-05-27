@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['productId'])){
+    unset($_SESSION['productId']);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +29,7 @@
         <span>CARRINHO</span>
     </nav>
     <div class="pageBackground">
+    
         <div class="filterContainer">
             <div class="filterTypeContainer">
                 <div class="filterTitle">
@@ -103,4 +111,5 @@
     </footer>
 </body>
 <script src="assets/js/getProducts.js"></script>
+<script src="assets/js/formSubmit.js"></script>
 </html>
