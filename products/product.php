@@ -8,6 +8,7 @@ if(isset($_GET['productId'])){
     $return = $connect->query($query);
     $product = $return->fetch_assoc();
     $_SESSION['productTitulo'] = $product['titulo'];
+    $_SESSION['productPrice'] = $product['valor'];
     // echo json_encode($product);
 };
 ?>
@@ -60,7 +61,7 @@ if(isset($_GET['productId'])){
         </div>
         <div class="productInfoDisplay">
             
-            <h1><?php echo strtoupper($_SESSION['productTitulo']) ?></h1>
+            <h1 id="productTitle"></h1>
             <div class="subInfoDisplay">
                 <div class="line row">
                     <div class="line full-height justify">
@@ -68,9 +69,9 @@ if(isset($_GET['productId'])){
                     </div>
                     <div class="line center-row full-width gap-15 ">
                         <!-- <span class="qtd">(QUANTIDADE: 1)</span> -->
-                        <span class="title"><?php echo strtoupper($_SESSION['productTitulo']); ?></span>
+                        <span id="productSubTitle" class="title"></span>
                         <div class="line row gap-15">
-                            <span>R$ 138,00</span>
+                            <span id="productPrice"><?php echo $_SESSION['productPrice']; ?></span>
                             <span class="previousValue"><s>R$ 158,00</s></span>
                         </div>
                     </div>
@@ -168,4 +169,8 @@ if(isset($_GET['productId'])){
 </body>
 <script src="../assets/js/selectSize.js"></script>
 <script src="../assets/js/selectColor.js"></script>
+<script src="../assets/js/getProduct.js"></script>
+<script>
+    getProduct(<?php echo $_SESSION['productId']?>);
+</script>
 </html>
