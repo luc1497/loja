@@ -11,15 +11,11 @@ $i=0;
 
 while ($product = $response->fetch_assoc()){
     $id = $product['id'];
-    if(file_exists("../assets/images/products/$id/foto.jpg")){
-        $product['img'] = true;
-    }else{
-        $product['img'] = false;
-        
-    }
+    $product['img'] = true;
+    
     
     $id = $product['id'];
-    $filepath = "assets/images/products";
+    $filepath = "assets/uploads/products_images/";
         
     $products[$i] = $product;
     $i++;
