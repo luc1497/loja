@@ -10,13 +10,8 @@ $response = $connect->query($query);
 $i=0;
 
 while ($product = $response->fetch_assoc()){
-    $id = $product['id'];
-    $product['img'] = true;
+    $id = $product['id'];    
     
-    
-    $id = $product['id'];
-    $filepath = "assets/uploads/products_images/";
-        
     $products[$i] = $product;
     $i++;
 }
