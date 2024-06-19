@@ -40,23 +40,23 @@ if(isset($_GET['productId'])){
     <div class="pageBackground">
         <div class="productImgsDisplay">
             <div class="productImgContainer">
-                <img src="../assets/images/products/1/foto.jpg" alt="img">
+                <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
             </div>
             <div class="productImgContainer">
-                <img src="../assets/images/products/1/foto.jpg" alt="img">
+                <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
             </div>
             <div class="productImgContainer">
-                <img src="../assets/images/products/1/foto.jpg" alt="img">
+                <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
             </div>
             <div class="productImgContainer">
-                <img src="../assets/images/products/1/foto.jpg" alt="img">
+                <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
             </div>
             <div class="productImgContainer">
-                <img src="../assets/images/products/1/foto.jpg" alt="img">
-          </div>
+                <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
+            </div>
             <div class="productImgContainer">
-                <img src="../assets/images/products/1/foto.jpg" alt="img">
-          </div>
+                 <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
+            </div>
             
         </div>
         <div class="productInfoDisplay">
@@ -65,7 +65,7 @@ if(isset($_GET['productId'])){
             <div class="subInfoDisplay">
                 <div class="line row">
                     <div class="line full-height justify">
-                        <img style="width: 100px; border-radius:10px;" src="../assets/images/products/1/foto.jpg" alt="img">
+                        <img style="width: 100px; border-radius:10px;" src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
                     </div>
                     <div class="line center-row full-width gap-15 ">
                         <!-- <span class="qtd">(QUANTIDADE: 1)</span> -->
