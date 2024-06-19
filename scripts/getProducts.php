@@ -10,8 +10,8 @@ $response = $connect->query($query);
 $i=0;
 
 while ($product = $response->fetch_assoc()){
-    $id = $product['id'];
-        
+    $id = $product['id'];    
+    
     $products[$i] = $product;
     $i++;
 }

@@ -23,7 +23,7 @@ function getProducts(){
                 <form action="products/product.php" method="GET" onclick="formSubmit(${product.id});" class="productForm" id="productForm${product.id}">
                 <div class="productContainer">
                     <div class="productImgContainer">
-                    ${product.img == true ? `<img class="productImg" src="https://hardteste-sheetonline.shop/uploads/products_images/${product.id}/foto.jpg" alt="img">` : `<img class="productImg" src="assets/images/products/noImage.png" alt="img">`}
+                    ${product.img == true ? `<img class="productImg" src="https://hardteste-sheetonline.shop/uploads/products_images/${product.id}/foto.jpg" alt="img">` : `<img class="productImg" src="https://hardteste-sheetonline.shop/uploads/products_images/noImage.png" alt="img">`}
                     </div>
                     <span>${product.titulo.toUpperCase()}</span>
                     <span>R$ ${product.valor}</span>

@@ -55,7 +55,7 @@ if(isset($_GET['productId'])){
                 <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
             </div>
             <div class="productImgContainer">
-                <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
+                 <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
             </div>
             
         </div>
