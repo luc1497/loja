@@ -38,25 +38,8 @@ if(isset($_GET['productId'])){
         <span>CARRINHO</span>
     </nav>
     <div class="pageBackground">
-        <div class="productImgsDisplay">
-            <div class="productImgContainer">
-                <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
-            </div>
-            <div class="productImgContainer">
-                <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
-            </div>
-            <div class="productImgContainer">
-                <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
-            </div>
-            <div class="productImgContainer">
-                <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
-            </div>
-            <div class="productImgContainer">
-                <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
-            </div>
-            <div class="productImgContainer">
-                 <img src="https://hardteste-sheetonline.shop/uploads/products_images/1/foto.jpg" alt="img">
-            </div>
+        <div id="productImgsDisplay" class="productImgsDisplay">
+           
             
         </div>
         <div class="productInfoDisplay">
@@ -71,8 +54,8 @@ if(isset($_GET['productId'])){
                         <!-- <span class="qtd">(QUANTIDADE: 1)</span> -->
                         <span id="productSubTitle" class="title"></span>
                         <div class="line row gap-15">
-                            <span id="productPrice"><?php echo $_SESSION['productPrice']; ?></span>
-                            <span class="previousValue"><s>R$ 158,00</s></span>
+                            <span id="productPrice"></span>
+                            <span id="previousValue" class="previousValue"></span>
                         </div>
                     </div>
                 </div>
@@ -170,6 +153,7 @@ if(isset($_GET['productId'])){
 <script src="../assets/js/selectSize.js"></script>
 <script src="../assets/js/selectColor.js"></script>
 <script src="../assets/js/getProduct.js"></script>
+<script src="../assets/js/convertToMoney.js"></script>
 <script>
     getProduct(<?php echo $_SESSION['productId']?>);
 </script>

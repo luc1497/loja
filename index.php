@@ -112,4 +112,5 @@ if(isset($_SESSION['productId'])){
 </body>
 <script src="assets/js/getProducts.js"></script>
 <script src="assets/js/formSubmit.js"></script>
+<script src="assets/js/convertToMoney.js"></script>
 </html>

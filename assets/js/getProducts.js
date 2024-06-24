@@ -20,13 +20,13 @@ function getProducts(){
                        
                 showcase.innerHTML +=
                 `
-                <form action="products/product.php" method="GET" onclick="formSubmit(${product.id});" class="productForm" id="productForm${product.id}">
+                <form action="products/" method="GET" onclick="formSubmit(${product.id});" class="productForm" id="productForm${product.id}">
                 <div class="productContainer">
                     <div class="productImgContainer">
-                    ${product.img == true ? `<img class="productImg" src="https://hardteste-sheetonline.shop/uploads/products_images/${product.id}/foto.jpg" alt="img">` : `<img class="productImg" src="https://hardteste-sheetonline.shop/uploads/products_images/noImage.png" alt="img">`}
+                    ${product.img == true ? `<img class="productImg" src="${product.image.path}" alt="img">` : `<img class="productImg" src="https://hardteste-sheetonline.shop/uploads/products_images/noImage.png" alt="img">`}
                     </div>
                     <span>${product.titulo.toUpperCase()}</span>
-                    <span>R$ ${product.valor}</span>
+                    <span>R$ ${convertToMoney(product.valor)}</span>
                     <span>RATING</span>
                     <input type="hidden" name="productId" value="${product.id}"></input>
                 </div>

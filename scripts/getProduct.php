@@ -12,14 +12,18 @@ $i=0;
 while ($product = $response->fetch_assoc()){
     $id = $product['id'];    
     if($product['img'] == 1){
-        $imgQuey = "SELECT * FROM imagens WHERE bem_id = '$id' ORDER BY id";
-        $imgResponse = $connect->query($imgQuey);
-        $image = $imgResponse->fetch_assoc();
+        $imgQuery = "SELECT * FROM imagens WHERE bem_id = '$id' ORDER BY id";
+        $imgResponse = $connect->query($imgQuery);
+        $cont = 0;
+        while($image = $imgResponse->fetch_assoc()){
+            $images[$cont] = $image;
+            $cont++;
+        };
 
+        $product["images"] = $images;
     }
 
 
-    $product["image"] = $image;
     
     $products[$i] = $product;
     $i++;

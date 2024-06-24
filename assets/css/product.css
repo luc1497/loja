@@ -8,7 +8,7 @@
     .productImgContainer{
         width: 400px;
         height: 400px;
-        background-color: aquamarine;
+        background-color: #0c0c0c;
         overflow: hidden;
         /* align-items: center; */
         justify-content: center;
