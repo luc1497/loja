@@ -1,7 +1,7 @@
 function getProducts(){
     
     var data = {
-        "query": "SELECT * FROM products ORDER BY id"
+        "query": "SELECT * FROM products WHERE deletado=0 AND status='Disponível' ORDER BY id"
     }
 
     fetch("scripts/getProducts.php", {method:"POST", headers: {'Content-type':'application/json'}, body: JSON.stringify(data)})
