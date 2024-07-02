@@ -1,8 +1,13 @@
 <?php
 session_start();
+
+if(!isset($_SESSION['productId'])){
+    $_SESSION["lastQuery"] = "SELECT * FROM products WHERE deletado=0 AND status!='Rascunho' ORDER BY id";
+}
 if(isset($_SESSION['productId'])){
     unset($_SESSION['productId']);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -31,12 +36,12 @@ if(isset($_SESSION['productId'])){
     <div class="pageBackground">
     
         <div class="filterContainer">
-            <div class="filterTypeContainer">
+            <div id="filterTypeContainer" class="filterTypeContainer">
                 <div class="filterTitle">
                     <div class="symble"></div>
                     <span>TIPO</span>
                 </div>
-                <div class="filterOption">
+                <!-- <div class="filterOption">
                     <input type="checkbox">
                     <span>CAMISAS</span>
                 </div>
@@ -47,7 +52,7 @@ if(isset($_SESSION['productId'])){
                 <div class="filterOption">
                     <input type="checkbox">
                     <span>CASACOS</span>
-                </div>
+                </div> -->
             </div>
             <div class="filterTypeContainer">
                 <div class="filterTitle">
@@ -79,6 +84,7 @@ if(isset($_SESSION['productId'])){
                     <span>XXL</span>
                 </div>
             </div>
+            <button onclick="getProducts();">FILTRAR</button>
         </div>
         <div id="showcase" class="showcase">
             <!-- <div class="productContainer">

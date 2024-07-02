@@ -55,7 +55,26 @@ nav{
     color: white;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
+    
+    button{
+        height: 25px;
+        width: 100px;
+        font-size: 12px;
+        font-family: "Roboto", sans-serif;
+        border: 2px solid saddlebrown;
+        border-radius: 4px;
+        text-align: center;
+        color: saddlebrown;
+        background: none;
+        transition-duration: 0.15s
+    }
 
+    button:hover{
+        background-color: saddlebrown;
+        border: white;
+        color: white;
+        cursor: pointer;
+    }
 
 
 }
@@ -95,6 +114,20 @@ nav{
     }
     
 }
+.typeFilterOption{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    margin-bottom: 5px;
+    align-items: center;
+
+    input{
+        margin: 0;
+    }
+    
+}
+
+
 
 
 
@@ -142,6 +175,11 @@ nav{
     /* flex-direction: column; */
 
     
+}
+
+.productForm{
+    height: 330px;
+
 }
 
 
